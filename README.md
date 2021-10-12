@@ -20,7 +20,7 @@
 ## To Run the server to client leg
 
 - cd to the target directory
-- touch a file buy running echo "abcd" > test
+- touch a file by running echo "abcd" > test
 - Simulate the server to client leg by running
 ```
     java -jar payload-encryption-decryption-1.0-SNAPSHOT-jar-with-dependencies.jar s2c test
@@ -43,7 +43,7 @@ We leveraged
 - java keytool 
 as the tools to crete these pairs. The client and the  server will have to go through this exercise.
 
-## Creation of RSA keys
+## Step 1 Creation of RSA keys
 
 Create a keystore using java keytool. The command to do this is
 
@@ -55,6 +55,7 @@ The keytool will then ask you to fill out a series of questions (answer appropri
 
 Prompt        | Sample Value  | Description
 ------------- | ------------- | -----------
+Enter a password | abcd1234 | Enter password that meets requirements
 What is your first and last name   | What is your first and last name | Usually the url of your company
 What is the name of your organizational unit?   | Mobile | Mobile
 What is the name of your organization | Mobile | org name
@@ -65,7 +66,7 @@ Country code | US | country
 This should create a keystore in the directory where you ran this command. Ensure that you see the file
 
 
-## Convert format 
+## Step 2 Convert format 
 
 The first step is Changing format of the keystore created into pkcs format. User the below command for it
 
@@ -73,7 +74,7 @@ The first step is Changing format of the keystore created into pkcs format. User
 
 This should change the file to pkcs12 format. It also backs up the keystore with an .old extension
 
-## Extract private key and public certificate
+## Step 3 Extract private key and public certificate
 
 Extract the private key from this file by running the following command
 
