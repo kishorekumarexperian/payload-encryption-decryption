@@ -59,11 +59,11 @@ public class Util {
         String pub, priv;
 
         if (clientOrServer.equalsIgnoreCase("server") ) {
-            System.out.println("Server is decrypting using server's private key and verifying signature with client's public key");
+            System.out.println("Server is decrypting using server's private key and verifying signature with client's public certificate");
             pub = Keys.clientPublicKey ;
             priv = Keys.serverPrivateKey;
         } else{
-            System.out.println("Client is decrypting using client's private key and verifying signature with server's public key");
+            System.out.println("Client is decrypting using client's private key and verifying signature with server's public certificate");
 
             pub = Keys.serverPublicKey ;
             priv = Keys.clientPrivateKey;
@@ -90,15 +90,15 @@ public class Util {
         String pub, priv;
 
         if (clientOrServer.equalsIgnoreCase("server") ) {
-            System.out.println("Server is Encrypting using client's public key and signing with server private key");
+            System.out.println("Server is Encrypting using client's public certificate and signing with server private key");
             pub = Keys.clientPublicKey ;
             priv = Keys.serverPrivateKey;
         } else{
-            System.out.println("Client is Encrypting using server's public key and signing with client's private key");
+            System.out.println("Client is Encrypting using server's public certificate and signing with client's private key");
             pub = Keys.serverPublicKey ;
             priv = Keys.clientPrivateKey;
         }
-        // If the ecryption is done by client, signing is done using client's private key
+        // If the encryption is done by client, signing is done using client's private key
          // Generate the preset Content Encryption (CEK) key
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
         keyGenerator.init(EncryptionMethod.A128CBC_HS256.cekBitLength());
