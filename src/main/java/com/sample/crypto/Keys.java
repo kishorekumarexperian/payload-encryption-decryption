@@ -55,7 +55,7 @@ public class Keys {
                     "BbeSne/Nht3Ywo2lR5SjyLA=" +
                     "-----END CERTIFICATE-----";
 
-    public static String serverPublicKey = "-----BEGIN CERTIFICATE-----\n" +
+    public static String serverPublicCertificate = "-----BEGIN CERTIFICATE-----\n" +
             "MIIDXzCCAkegAwIBAgIEa5/1QTANBgkqhkiG9w0BAQsFADBgMQswCQYDVQQGEwJV\n" +
             "UzELMAkGA1UECBMCdHgxDjAMBgNVBAcTBWFsbGVuMREwDwYDVQQKEwhleHBlcmlh\n" +
             "bjESMBAGA1UECxMJc3VyYW1wdWRpMQ0wCwYDVQQDEwR2ZW51MB4XDTIxMTAwNTE0\n" +
@@ -77,7 +77,7 @@ public class Keys {
             "BLqX\n" +
             "-----END CERTIFICATE-----";
 
-            public static String serverPublicCertificate = "-----BEGIN PRIVATE KEY-----" +
+            public static String serverPrivateKey = "-----BEGIN PRIVATE KEY-----" +
                     "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTUKJMbr5/5ePw" +
                     "2kEvDFlcEzw+J7Pv4DQ6GoEdWoQPJay8LUV7Y/HY7dyj6pXGS6pQCPoo3ut+wLQD" +
                     "P9nnQhxb0R8n+fOo883WkRzd/lHhlC1RArfp5HLQE/318z0mMqSAXN25wOBMSg3P" +
