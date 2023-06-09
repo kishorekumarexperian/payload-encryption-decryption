@@ -60,12 +60,12 @@ public class Util {
 
         if (clientOrServer.equalsIgnoreCase("server") ) {
             System.out.println("Server is decrypting using server's private key and verifying signature with client's public certificate");
-            pub = Keys.clientPublicKey ;
+            pub = Keys.clientPublicCertificate ;
             priv = Keys.serverPrivateKey;
         } else{
             System.out.println("Client is decrypting using client's private key and verifying signature with server's public certificate");
 
-            pub = Keys.serverPublicKey ;
+            pub = Keys.serverPublicCertificate ;
             priv = Keys.clientPrivateKey;
         }
 
@@ -91,11 +91,11 @@ public class Util {
 
         if (clientOrServer.equalsIgnoreCase("server") ) {
             System.out.println("Server is Encrypting using client's public certificate and signing with server private key");
-            pub = Keys.clientPublicKey ;
+            pub = Keys.clientPublicCertificate ;
             priv = Keys.serverPrivateKey;
         } else{
             System.out.println("Client is Encrypting using server's public certificate and signing with client's private key");
-            pub = Keys.serverPublicKey ;
+            pub = Keys.serverPublicCertificate ;
             priv = Keys.clientPrivateKey;
         }
         // If the encryption is done by client, signing is done using client's private key
